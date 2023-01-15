@@ -12,10 +12,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+      "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+      "develop": "gatsby develop",
+      "build": "gatsby build",
+      "clean": "gatsby clean",
+      "serve": "gatsby serve",
+      "deploy": "gatsby-plugin-s3 deploy --yes; export AWS_PAGER=\"\";"
   },
   "eslintConfig": {
     "extends": [
@@ -36,3 +38,4 @@
     ]
   }
 }
+
